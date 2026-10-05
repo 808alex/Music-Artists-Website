@@ -27,3 +27,13 @@
 
 ![sketch of artists pages](<artists page sketch.png>)
 ![sketch of main website](<website sketch.png>)
+
+
+
+
+05/10
+
+- changed the 10 rappers into cards to clean up space and make css easier to work with
+- changed mistakes and typos, renamed some files, added honourable mentions webpage, added a few more artists to the honourable mentions page
+
+- need to make honourable mentions image (use canva and just add a bunch of honourable mention artists and make it look cool)
