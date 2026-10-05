@@ -17,6 +17,10 @@ body {
     text-align: center;
 }
 
+h1, h3, h4 {
+    margin: 8px 0;
+}
+
 h1 {
     color: var(--green);
 }
@@ -32,6 +36,7 @@ hr {
     height: 2px;
     background: var(--purple);
     margin: min(92vw, 1100px);
+    margin: 16px auto;
 }
 
 
@@ -39,36 +44,103 @@ hr {
 .artist-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 20px;
     width: min(92vw, 1100px);
     margin-inline: auto;
 }
 
 /* ------------------------------- the cards -------------------------------- */
 .artist-card {
-    position: relative;
-    overflow:hidden;
-    aspect-ratio: 1/1;
+    border: 2px solid var(--purple);
     border-radius: 12px;
+    padding: 12px;
+    background: rgba(138, 43, 226, 0.08);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.artist-card img {
+.artist-card:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 18px rgba(57, 255, 136, 0.35);
+}
+
+.artist-name {
+    margin: 0 0 10px;
+    color: var(--green);
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+}
+
+.card-image img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.artist-link {
+
+
+/* ------------------------------- image hover effect -------------------------------- */
+
+.card-overlay {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 12px;
-    background: rgba(11, 6, 18, 0.75);
-    text-decoration: none;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+
+/* hovering the image (or tabbing to a link inside it) blurs the photo and shows the overlay */
+.card-image:hover img,
+.card-image:focus-within img {
+    filter: blur(8px) brightness(0.4);
+    transform: scale(1.05);
+}
+
+.card-image:hover .card-overlay,
+.card-image:focus-within .card-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay-name {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--green);
     font-weight: bold;
+}
+
+.card-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-links a {
+    padding: 8px 14px;
+    border: 1px solid var(--green);
+    border-radius: 999px;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.card-links a:hover {
+    background: var(--green);
+    color: var(--bg);
 }
 
 /* ------------------------------- the "more" link -------------------------------- */
@@ -83,5 +155,15 @@ hr {
 @media (max-width: 600px) {
     .artist-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (hover: none) {
+    .card-image img {
+        filter: blur(8px) brightness(0.4);
+    }
+    .card-overlay {
+        opacity: 1;
+        pointer-events: auto;
     }
 }
