@@ -1,4 +1,4 @@
-
+### 21/09
 
 - having issues figuring out how to make the website look. 
 - made a sketch for the main page
@@ -31,9 +31,24 @@
 
 
 
-05/10
+### 05/10
 
-- changed the 10 rappers into cards to clean up space and make css easier to work with
-- changed mistakes and typos, renamed some files, added honourable mentions webpage, added a few more artists to the honourable mentions page
+**what i done**
+- changed any typos and wrong text from last time
+- learned how to use cards and implemented them into my project
+- changed the tree, moved index.html outside of html folder to fix web page problems on chrome
+- added a basic footer for now, will update later
+- created css file and started basic css
+  -   created root css for the whole webpage
+  -   basic page styles for nice formatting and text
+  -   made the stylesheet for the cards, making sure they are in the middle and look good
+  -   made sure to make a responsive design for any device
 
-- need to make honourable mentions image (use canva and just add a bunch of honourable mention artists and make it look cool)
+ **need to do**
+- need to fix webpage dimensions, right now everything is too far from eachother, need to fix hr rule
+- not sure about the size of the cards, maybe ill make them a bit smaller
+- need to work on the cards, hover over them blurs the image and pops up the artists name, bio and links
+- need to create a border around the cards to make them pop out more
+- need to remove the link from the bottom of the cards and add a heading at the top of the image to show the artists name
+- need to make a honourable image for the honourable artists
+- need to create a animated gif for the corner of the webpage
