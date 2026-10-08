@@ -52,3 +52,18 @@
 - need to remove the link from the bottom of the cards and add a heading at the top of the image to show the artists name
 - need to make a honourable image for the honourable artists
 - need to create a animated gif for the corner of the webpage
+
+### 06/10
+
+**what i done**
+- updated artists bio from default text to my own
+- fixed the css formatting of the page, now everything is nicely together
+- created on-hover elements in the css, working nicely
+- created a border around the cards
+- removed link from the cards and added artist name at the top
+
+**need to do**
+- still need to create a animated image/gif
+- thinking of changing the on-hover to blur the whole card instead of just image
+- need to update some of the text from yap to actual good text
+- need to start working on the individual artists webpages and create a common style for all
