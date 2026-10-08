@@ -8,6 +8,13 @@
 
 
 /* --------------------------------- page basics -------------------------------- */
+header {
+    position: relative;
+    width: min(92vw, 1100px);
+    margin-inline: auto;
+    min-height: clamp(90px, 10vw, 150px);
+}
+
 body {
     margin: 0;
     padding: 24px 0;
@@ -26,7 +33,7 @@ h1 {
 }
 
 .intro {
-    max-width: 60ch;
+    max-width: 70ch;
     margin-inline: auto;
     line-height: 1.6;
 }
@@ -35,8 +42,17 @@ hr {
     border: 0;
     height: 2px;
     background: var(--purple);
-    margin: min(92vw, 1100px);
+    width: min(92vw, 1100px);
     margin: 16px auto;
+}
+
+.animated-logo {
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    width: clamp(90px, 10vw, 150px);
+    height: auto;
+    z-index: 10;
 }
 
 
@@ -155,6 +171,15 @@ hr {
 @media (max-width: 600px) {
     .artist-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .animated-logo {
+        position: static;
+        display: block;
+        margin: 0 auto 8px;
+        width: 90px;
     }
 }
 
